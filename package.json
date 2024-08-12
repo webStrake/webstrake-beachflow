@@ -1,0 +1,25 @@
+{
+    "name": "@webstrake/beachflow",
+    "version": "1.0.1",
+    "description": "beachflow - webstrake's design system",
+    "main": "index.js",
+    "types": "index.d.ts",
+    "exports": {
+      ".": "./index.d.ts",
+      "./css": "./common/index.css",
+      "./tailwind": "./common/tailwind.config.ts"
+    },
+    "scripts": {
+    },
+    "type": "module",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/webStrake/webstrake-beachflow.git"
+    },
+    "author": "webstrake",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/webStrake/webstrake-beachflow/issues"
+    },
+    "homepage": "https://github.com/webStrake/webstrake-beachflow#readme"
+  }

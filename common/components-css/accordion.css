@@ -1,0 +1,34 @@
+.accordion-content {
+  transform: scaleY(0);
+  transform-origin: top;
+  opacity: 0;
+  transition: all 0.3s ease-out;
+}
+
+details[open] > summary {
+  @apply bg-primary-100;
+}
+
+details > summary {
+  @apply bg-surface-50 p-4 cursor-pointer flex justify-between items-center border-b border-gray-200;
+}
+
+details summary::after {
+  content: 'expand_more';
+  font-family: 'Material Symbols Rounded';
+  @apply transition-transform duration-300 text-2xl;
+}
+
+details[open] > summary::after {
+  @apply transform rotate-180;
+}
+
+details > .accordion-content {
+  @apply p-4 border-b border-gray-200;
+}
+
+details[open] .accordion-content {
+  transform: scaleY(1);
+  opacity: 1;
+  transition: all 0.3s ease-in;
+}
