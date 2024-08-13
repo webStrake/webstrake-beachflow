@@ -8,7 +8,7 @@
         ".": "./index.d.ts",
         "./css": "./common/index.css",
         "./tailwind": "./common/tailwind.config.ts",
-        "./components": "./common/components"
+        "./components": "./common/components/index.css"
     },
     "scripts": {},
     "type": "module",
