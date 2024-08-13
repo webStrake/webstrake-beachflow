@@ -1,0 +1,138 @@
+/* Base styles for the button */
+button {
+  @apply px-4 py-2 m-3 rounded-2xl font-semibold inline-flex items-center justify-center;
+  min-width: 120px;
+}
+
+/* Primary button */
+button.primary {
+  @apply bg-primary-400 text-white;
+}
+button.primary:hover {
+  @apply bg-primary-800;
+}
+
+/* Secondary button */
+button.secondary {
+  @apply bg-secondary-100 text-secondary-800;
+}
+button.secondary:hover {
+  @apply bg-secondary-800 text-white;
+}
+
+/* Success button */
+button.success {
+  @apply bg-success-500 text-white;
+}
+button.success:hover {
+  @apply bg-success-800;
+}
+
+/* Warning button */
+button.warning {
+  @apply bg-warning-500 text-white;
+}
+button.warning:hover {
+  @apply bg-warning-800;
+}
+
+/* Error button */
+button.error {
+  @apply bg-error-500 text-white;
+}
+button.error:hover {
+  @apply bg-error-800;
+}
+
+/* Outline button styles */
+button.outlined {
+  @apply border-2 text-current bg-transparent;
+}
+button.outlined.primary {
+  @apply border-primary-500 text-primary-500;
+}
+
+button.outlined.primary:hover {
+  @apply bg-primary-500 text-white;
+}
+
+button.outlined.secondary {
+  @apply border-secondary-500 text-secondary-500;
+}
+
+button.outlined.secondary:hover {
+  @apply bg-secondary-500 text-white;
+}
+
+button.outlined.success {
+  @apply border-success-500 text-success-500;
+}
+
+button.outlined.success:hover {
+  @apply bg-success-500 text-white;
+}
+button.outlined.warning {
+  @apply border-warning-500 text-warning-500;
+}
+
+button.outlined.warning:hover {
+  @apply bg-warning-500 text-white;
+}
+button.outlined.error {
+  @apply border-error-500 text-error-500;
+}
+
+button.outlined.error:hover {
+  @apply bg-error-500 text-white;
+}
+
+/* Flat button styles */
+button.flat {
+  @apply bg-transparent text-current;
+}
+button.flat:hover {
+  @apply bg-gray-200;
+}
+button.flat.primary {
+  @apply text-primary-500;
+}
+button.flat.secondary {
+  @apply text-secondary-500;
+}
+button.flat.success {
+  @apply text-success-500;
+}
+button.flat.warning {
+  @apply text-warning-500;
+}
+button.flat.error {
+  @apply text-error-500;
+}
+
+button.loading {
+  @apply cursor-not-allowed;
+}
+
+button.loading .button-text {
+  @apply opacity-50;
+}
+
+button.loading::before {
+  content: "";
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}

@@ -1,0 +1,52 @@
+/* Breadcrumb Base */
+.breadcrumb {
+    @apply flex items-center space-x-1 text-sm;
+  }
+  
+  /* Breadcrumb Item */
+  .breadcrumb-item {
+    @apply text-gray-600 hover:text-gray-800;
+  }
+  
+  /* Breadcrumb Item Active */
+  .breadcrumb-item-active {
+    @apply text-gray-800 font-semibold;
+  }
+  
+  /* Breadcrumb Separator */
+  .breadcrumb-separator {
+    @apply text-gray-400;
+  }
+  
+  /* Colors */
+  .breadcrumb-primary .breadcrumb-item {
+    @apply text-primary-600 hover:text-primary-800;
+  }
+  .breadcrumb-primary .breadcrumb-item-active {
+    @apply text-primary-800;
+  }
+  .breadcrumb-secondary .breadcrumb-item {
+    @apply text-secondary-600 hover:text-secondary-800;
+  }
+  .breadcrumb-secondary .breadcrumb-item-active {
+    @apply text-secondary-800;
+  }
+  .breadcrumb-success .breadcrumb-item {
+    @apply text-success-600 hover:text-success-800;
+  }
+  .breadcrumb-success .breadcrumb-item-active {
+    @apply text-success-800;
+  }
+  .breadcrumb-warning .breadcrumb-item {
+    @apply text-warning-600 hover:text-warning-800;
+  }
+  .breadcrumb-warning .breadcrumb-item-active {
+    @apply text-warning-800;
+  }
+  .breadcrumb-error .breadcrumb-item {
+    @apply text-error-600 hover:text-error-800;
+  }
+  .breadcrumb-error .breadcrumb-item-active {
+    @apply text-error-800;
+  }
+  
