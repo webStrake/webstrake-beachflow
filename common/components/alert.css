@@ -1,56 +1,56 @@
 .alert {
-    @apply flex items-center p-4 rounded-lg m-3 relative;
-  }
-  
-  .alert-icon {
-    @apply mr-3 text-4xl leading-none;
-    font-family: 'Material Symbols Rounded';
-    font-variation-settings: 'FILL' 1;
-  }
-  
-  .alert-info .alert-icon::after {
-    content: "info";
-  }
-  
-  .alert-success .alert-icon::after {
-    content: "check_circle";
-  }
-  
-  .alert-warning .alert-icon::after {
-    content: "warning";
-  }
-  
-  .alert-error .alert-icon::after {
-    content: "error";
-  }
-  
-  .alert-title {
-    @apply font-semibold text-lg;
-  }
-  
-  .alert-description {
-    @apply mt-1 text-sm;
-  }
-  
-  .alert-info {
-    @apply bg-tertiary-50 text-tertiary-900 dark:bg-tertiary-800 dark:text-tertiary-50;
-  }
-  
-  .alert-success {
-    @apply bg-success-50 text-success-900 dark:bg-success-800 dark:text-success-50;
-  }
-  
-  .alert-warning {
-    @apply bg-warning-50 text-warning-900 dark:bg-warning-800 dark:text-warning-50;
-  }
-  
-  .alert-error {
-    @apply bg-error-50 text-error-900 dark:bg-error-800 dark:text-error-50;
-  }
-  
-  .alert-close {
-    @apply absolute top-2 right-2 p-1 text-lg text-gray-600 hover:text-gray-900;
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
+  @apply flex items-center p-4 rounded-lg m-3 relative;
+}
+
+.alert-icon {
+  @apply mr-3 text-4xl leading-none;
+  font-family: 'Material Symbols Rounded';
+  font-variation-settings: 'FILL' 1;
+}
+
+.info .alert-icon::after {
+  content: "info";
+}
+
+.success .alert-icon::after {
+  content: "check_circle";
+}
+
+.warning .alert-icon::after {
+  content: "warning";
+}
+
+.error .alert-icon::after {
+  content: "error";
+}
+
+.alert-title {
+  @apply font-semibold text-lg;
+}
+
+.alert-description {
+  @apply mt-1 text-sm;
+}
+
+.alert.info {
+  @apply bg-tertiary-50 text-tertiary-900 dark:bg-tertiary-800 dark:text-tertiary-50;
+}
+
+.alert.success {
+  @apply bg-success-50 text-success-900 dark:bg-success-800 dark:text-success-50;
+}
+
+.alert.warning {
+  @apply bg-warning-50 text-warning-900 dark:bg-warning-800 dark:text-warning-50;
+}
+
+.alert.error {
+  @apply bg-error-50 text-error-900 dark:bg-error-800 dark:text-error-50;
+}
+
+.alert-close {
+  @apply absolute top-2 right-2 p-1 text-lg text-gray-600 hover:text-gray-900;
+  background: none;
+  border: none;
+  cursor: pointer;
+}

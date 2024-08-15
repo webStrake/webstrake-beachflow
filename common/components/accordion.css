@@ -3,6 +3,7 @@
   transform-origin: top;
   opacity: 0;
   transition: all 0.3s ease-out;
+  @apply text-start
 }
 
 details[open] > summary {

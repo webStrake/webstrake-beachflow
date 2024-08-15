@@ -1,0 +1,169 @@
+/* button-group.css */
+
+.btn-group {
+  @apply inline-flex rounded-full overflow-hidden p-3;
+}
+
+.btn-group .btn {
+  @apply px-4 py-2 text-sm font-medium transition-colors duration-150 ease-in-out focus:outline-none;
+}
+
+/* Default (filled) style */
+.btn-group:not(.outline) {
+  @apply bg-gray-100;
+}
+
+.btn-group:not(.outline) .btn {
+  @apply text-gray-700;
+}
+
+.btn-group:not(.outline) .btn:hover {
+  @apply bg-gray-200;
+}
+
+/* Outline style */
+.btn-group.outline {
+  @apply bg-white border border-gray-300;
+}
+
+.btn-group.outline .btn {
+  @apply text-gray-700;
+}
+
+.btn-group.outline .btn:hover {
+  @apply bg-gray-100;
+}
+
+/* Active state */
+.btn-group .btn.active {
+  @apply bg-opacity-100;
+}
+
+/* Disabled state */
+.btn-group .btn:disabled {
+  @apply opacity-50 cursor-not-allowed;
+}
+
+/* Color variations */
+.btn-group.plain:not(.outline) {
+  @apply bg-gray-50;
+}
+
+.btn-group.plain:not(.outline) .btn {
+  @apply text-gray-700;
+}
+
+.btn-group.plain:not(.outline) .btn:hover {
+  @apply bg-gray-200;
+}
+
+.btn-group.plain.outline {
+  @apply border border-gray-300;
+}
+
+.btn-group.plain.outline .btn {
+  @apply text-gray-700;
+}
+
+.btn-group.plain.outline .btn:hover {
+  @apply bg-gray-100;
+}
+
+/* Plain - Active state */
+
+.btn-group.plain:not(.outline) .btn.active{
+  @apply bg-gray-800 text-white;
+}
+
+/* primary */
+.btn-group.primary:not(.outline) {
+  @apply bg-primary-100;
+}
+
+.btn-group.primary:not(.outline) .btn {
+  @apply text-primary-700;
+}
+
+.btn-group.primary:not(.outline) .btn:hover {
+  @apply bg-primary-200;
+}
+
+.btn-group.primary.outline {
+  @apply border-primary-300;
+}
+
+.btn-group.primary.outline .btn {
+  @apply text-primary-700;
+}
+
+.btn-group.primary.outline .btn:hover {
+  @apply bg-primary-100;
+}
+
+/* Primary - Active state */
+
+.btn-group.primary:not(.outline) .btn.active{
+  @apply bg-primary-800 text-white;
+}
+
+/* secondary  */
+.btn-group.secondary:not(.outline) {
+  @apply bg-secondary-100;
+}
+
+.btn-group.secondary:not(.outline) .btn {
+  @apply text-secondary-700;
+}
+
+.btn-group.secondary:not(.outline) .btn:hover {
+  @apply bg-secondary-200;
+}
+
+.btn-group.secondary.outline {
+  @apply border-secondary-300;
+}
+
+.btn-group.secondary.outline .btn {
+  @apply text-secondary-700;
+}
+
+.btn-group.secondary.outline .btn:hover {
+  @apply bg-secondary-100;
+}
+
+/* Secondary - Active state */
+
+.btn-group.secondary:not(.outline) .btn.active{
+  @apply bg-secondary-800 text-white;
+}
+
+/* tertiary */
+.btn-group.tertiary:not(.outline) {
+  @apply bg-tertiary-100;
+}
+
+.btn-group.tertiary:not(.outline) .btn {
+  @apply text-tertiary-700;
+}
+
+.btn-group.tertiary:not(.outline) .btn:hover {
+  @apply bg-tertiary-200;
+}
+
+.btn-group.tertiary.outline {
+  @apply border-tertiary-300;
+}
+
+.btn-group.tertiary.outline .btn {
+  @apply text-tertiary-700;
+}
+
+.btn-group.tertiary.outline .btn:hover {
+  @apply bg-tertiary-100;
+}
+
+/* Tertiary - Active state */
+
+.btn-group.tertiary:not(.outline) .btn.active{
+  @apply bg-tertiary-800 text-white;
+}

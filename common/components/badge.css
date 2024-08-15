@@ -1,78 +1,107 @@
 /* Base Badge Class */
 .badge {
-    @apply inline-flex items-center px-2.5 py-0.5 rounded-full font-medium leading-5;
-  }
-  
-  /* Square Shape */
-  .badge-square {
-    @apply rounded-none;
-  }
-  
-  /* Colors */
-  .badge-primary {
-    @apply bg-primary-100 text-primary-700;
-  }
-  .badge-secondary {
-    @apply bg-secondary-100 text-secondary-700;
-  }
-  .badge-success {
-    @apply bg-success-100 text-success-700;
-  }
-  .badge-warning {
-    @apply bg-warning-100 text-warning-700;
-  }
-  .badge-error {
-    @apply bg-error-100 text-error-700;
-  }
-  
-  /* Outline Variants */
-  .badge-outline-primary {
-    @apply border border-primary-500 text-primary-500 bg-transparent;
-  }
-  .badge-outline-secondary {
-    @apply border border-secondary-500 text-secondary-500 bg-transparent;
-  }
-  .badge-outline-success {
-    @apply border border-success-500 text-success-500 bg-transparent;
-  }
-  .badge-outline-warning {
-    @apply border border-warning-500 text-warning-500 bg-transparent;
-  }
-  .badge-outline-error {
-    @apply border border-error-500 text-error-500 bg-transparent;
-  }
-  
-  /* Flat Variants */
-  .badge-flat-primary {
-    @apply bg-primary-50 text-primary-700;
-  }
-  .badge-flat-secondary {
-    @apply bg-secondary-50 text-secondary-700;
-  }
-  .badge-flat-success {
-    @apply bg-success-50 text-success-700;
-  }
-  .badge-flat-warning {
-    @apply bg-warning-50 text-warning-700;
-  }
-  .badge-flat-error {
-    @apply bg-error-50 text-error-700;
-  }
-  
-  /* Sizes */
-  .badge-xs {
-    @apply text-xs px-1.5 py-0.5;
-  }
-  .badge-sm {
-    @apply text-sm px-2 py-0.5;
-  }
-  .badge-md {
-    @apply text-base px-2.5 py-0.5;
-  }
-  .badge-lg {
-    @apply text-lg px-3 py-1;
-  }
-  .badge-xl {
-    @apply text-xl px-3.5 py-1;
-  }
-  
+  @apply inline-flex items-center rounded-full font-medium leading-5;
+}
+
+/* Square Shape */
+.badge.square {
+  @apply rounded-none;
+}
+
+.badge.small{
+  @apply px-1.5 py-0.5;
+}
+
+.badge.medium{
+  @apply px-2 py-0.5;
+}
+
+.badge.large{
+  @apply px-2.5 py-0.5;
+}
+
+.badge.xlarge{
+  @apply px-5 py-2;
+}
+
+.badge.xxlarge{
+  @apply px-8 py-4;
+}
+
+
+/* Colors */
+.badge.primary {
+  @apply bg-primary-100 text-primary-700;
+}
+.badge.secondary {
+  @apply bg-secondary-100 text-secondary-700;
+}
+.badge.tertiary {
+  @apply bg-tertiary-100 text-tertiary-700;
+}
+.badge.success {
+  @apply bg-success-100 text-success-700;
+}
+.badge.warning {
+  @apply bg-warning-100 text-warning-700;
+}
+.badge.error {
+  @apply bg-error-100 text-error-700;
+}
+
+/* Outline Variants */
+.badge.outline.primary {
+  @apply border border-primary-500 text-primary-500 bg-transparent;
+}
+.badge.outline.secondary {
+  @apply border border-secondary-500 text-secondary-500 bg-transparent;
+}
+.badge.outline.tertiary {
+  @apply border border-tertiary-500 text-tertiary-500 bg-transparent;
+}
+.badge.outline.success {
+  @apply border border-success-500 text-success-500 bg-transparent;
+}
+.badge.outline.warning {
+  @apply border border-warning-500 text-warning-500 bg-transparent;
+}
+.badge.outline.error {
+  @apply border border-error-500 text-error-500 bg-transparent;
+}
+
+/* Flat Variants */
+.badge.flat.primary {
+  @apply bg-primary-50 text-primary-700;
+}
+.badge.flat.secondary {
+  @apply bg-secondary-50 text-secondary-700;
+}
+.badge.flat.tertiary {
+  @apply bg-tertiary-50 text-tertiary-700;
+}
+.badge.flat.success {
+  @apply bg-success-50 text-success-700;
+}
+.badge.flat.warning {
+  @apply bg-warning-50 text-warning-700;
+}
+.badge.flat.error {
+  @apply bg-error-50 text-error-700;
+}
+
+/* Sizes */
+.badge.xs {
+  @apply text-xs px-1.5 py-0.5;
+}
+.badge.sm {
+  @apply text-sm px-2 py-0.5;
+}
+.badge.md {
+  @apply text-base px-2.5 py-0.5;
+}
+.badge.lg {
+  @apply text-lg px-3 py-1;
+}
+.badge.xl {
+  @apply text-xl px-3.5 py-1;
+}

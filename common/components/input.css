@@ -1,0 +1,25 @@
+.input-container {
+    @apply relative mb-5 w-full;
+  }
+  
+  .input-field {
+    @apply w-full py-2 text-base border-b-2 border-plain-300 bg-transparent transition-all duration-300 focus:outline-none;
+  }
+  
+  .input-label {
+    @apply absolute left-0 bottom-2 text-plain-500 transition-all duration-300 pointer-events-none;
+  }
+  
+  .input-field:focus ~ .input-label,
+  .input-field:not(:placeholder-shown) ~ .input-label {
+    @apply bottom-[-1.5rem] text-sm;
+  }
+  
+  .input-field:focus {
+    @apply border-primary-500;
+  }
+  
+  .input-field:focus ~ .input-label {
+    @apply text-primary-500;
+  }
+  
