@@ -39,6 +39,10 @@
     font-family: "Poppins", sans-serif;
   }
 
+  html{
+    scroll-behavior: smooth;
+  }
+
   .dark body {
     @apply bg-surface-50 text-surface-50;
   }
