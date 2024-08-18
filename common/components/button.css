@@ -1,145 +1,165 @@
 /* Base styles for the button */
-button {
+.btn {
   @apply px-4 py-2 rounded-2xl font-semibold inline-flex items-center justify-center;
   min-width: 120px;
 }
 
+/* Plain button */
+.btn.plain {
+  @apply bg-plain-100 text-plain-800;
+}
+.btn.plain:hover {
+  @apply bg-plain-800 text-white;
+}
+
 /* Primary button */
-button.primary {
+.btn.primary {
   @apply bg-primary-400 text-white;
 }
-button.primary:hover {
+.btn.primary:hover {
   @apply bg-primary-800;
 }
 
 /* Secondary button */
-button.secondary {
+.btn.secondary {
   @apply bg-secondary-100 text-secondary-800;
 }
-button.secondary:hover {
+.btn.secondary:hover {
   @apply bg-secondary-800 text-white;
 }
 
 /* Tertiary Button  */
-button.tertiary {
+.btn.tertiary {
   @apply bg-tertiary-100 text-tertiary-800;
 }
 
-button.tertiary:hover {
+.btn.tertiary:hover {
   @apply bg-tertiary-800 text-white;
 }
 
 /* Success button */
-button.success {
+.btn.success {
   @apply bg-success-500 text-white;
 }
-button.success:hover {
+.btn.success:hover {
   @apply bg-success-800;
 }
 
 /* Warning button */
-button.warning {
+.btn.warning {
   @apply bg-warning-500 text-white;
 }
-button.warning:hover {
+.btn.warning:hover {
   @apply bg-warning-800;
 }
 
 /* Error button */
-button.error {
+.btn.error {
   @apply bg-error-500 text-white;
 }
-button.error:hover {
+.btn.error:hover {
   @apply bg-error-800;
 }
 
 /* Outline button styles */
-button.outlined {
+.btn.outlined {
   @apply border-2 text-current bg-transparent;
 }
-button.outlined.primary {
+
+.btn.outlined.plain {
+  @apply border-plain-500 text-plain-500;
+}
+
+.btn.outlined.plain:hover {
+  @apply bg-plain-500 text-white;
+}
+
+.btn.outlined.primary {
   @apply border-primary-500 text-primary-500;
 }
 
-button.outlined.primary:hover {
+.btn.outlined.primary:hover {
   @apply bg-primary-500 text-white;
 }
 
-button.outlined.secondary {
+.btn.outlined.secondary {
   @apply border-secondary-500 text-secondary-500;
 }
 
-button.outlined.secondary:hover {
+.btn.outlined.secondary:hover {
   @apply bg-secondary-500 text-white;
 }
 
-button.outlined.tertiary {
+.btn.outlined.tertiary {
   @apply border-tertiary-500 text-tertiary-500;
 }
 
-button.outlined.tertiary:hover {
+.btn.outlined.tertiary:hover {
   @apply bg-tertiary-500 text-white;
 }
 
-button.outlined.success {
+.btn.outlined.success {
   @apply border-success-500 text-success-500;
 }
 
-button.outlined.success:hover {
+.btn.outlined.success:hover {
   @apply bg-success-500 text-white;
 }
-button.outlined.warning {
+.btn.outlined.warning {
   @apply border-warning-500 text-warning-500;
 }
 
-button.outlined.warning:hover {
+.btn.outlined.warning:hover {
   @apply bg-warning-500 text-white;
 }
-button.outlined.error {
+.btn.outlined.error {
   @apply border-error-500 text-error-500;
 }
 
-button.outlined.error:hover {
+.btn.outlined.error:hover {
   @apply bg-error-500 text-white;
 }
 
 /* Flat button styles */
-button.flat {
+.btn.flat {
   @apply bg-transparent text-current;
 }
-button.flat:hover {
+.btn.flat.plain {
+  @apply text-plain-500;
+}
+.btn.flat:hover {
   @apply bg-gray-200;
 }
-button.flat.primary {
+.btn.flat.primary {
   @apply text-primary-500;
 }
-button.flat.secondary {
+.btn.flat.secondary {
   @apply text-secondary-500;
 }
 
-button.flat.tertiary {
+.btn.flat.tertiary {
   @apply text-tertiary-500;
 }
 
-button.flat.success {
+.btn.flat.success {
   @apply text-success-500;
 }
-button.flat.warning {
+.btn.flat.warning {
   @apply text-warning-500;
 }
-button.flat.error {
+.btn.flat.error {
   @apply text-error-500;
 }
 
-button.loading {
+.btn.loading {
   @apply cursor-not-allowed;
 }
 
-button.loading .button-text {
+.btn.loading .button-text {
   @apply opacity-50;
 }
 
-button.loading::before {
+.btn.loading::before {
   content: "";
   transform: translate(-50%, -50%);
   width: 20px;

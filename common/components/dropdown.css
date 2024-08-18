@@ -1,0 +1,63 @@
+.dropdown {
+  @apply relative inline-block w-full;
+}
+
+.dropdown-search {
+  padding: 0.5rem;
+  @apply sticky top-0 z-10 bg-white;
+}
+.dropdown-search-input {
+  width: 100%;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+}
+.dropdown-loading {
+  text-align: center;
+  padding: 0.5rem;
+  color: #666;
+}
+
+.dropdown-toggle {
+  @apply w-full px-4 py-2 text-left bg-surface-50 border border-plain-300 rounded-md shadow-sm cursor-pointer transition-colors duration-200 flex justify-between items-center;
+}
+
+.dropdown-toggle:hover {
+  @apply bg-surface-100;
+}
+
+.dropdown-toggle:focus {
+  @apply outline-none ring-2 ring-primary-500 ring-opacity-50;
+}
+
+.dropdown-icon {
+  font-family: "Material Symbols Rounded";
+  @apply ml-2 text-plain-500;
+}
+
+.dropdown-menu {
+  @apply absolute z-10 w-full mt-1 bg-white border border-plain-300 rounded-md shadow-lg overflow-hidden;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.dropdown-item {
+  @apply w-full px-4 py-2 text-left hover:bg-surface-100 transition-colors duration-200;
+}
+
+.dropdown-item.selected {
+  @apply bg-primary-100 text-primary-800;
+}
+
+/* Color variations */
+.dropdown.primary .dropdown-toggle {
+  @apply border-primary-500 text-primary-800;
+}
+
+.dropdown.secondary .dropdown-toggle {
+  @apply border-secondary-500 text-secondary-500;
+}
+
+.dropdown.tertiary .dropdown-toggle {
+  @apply border-tertiary-500 text-tertiary-800;
+}

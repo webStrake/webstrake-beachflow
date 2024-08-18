@@ -1,0 +1,36 @@
+.layout-container {
+    @apply flex flex-col h-screen overflow-hidden bg-surface-50
+  }
+  
+  .layout-header {
+    @apply bg-surface-100 p-4 text-surface-900
+  }
+  
+  .layout-body {
+    @apply flex flex-1 overflow-hidden
+  }
+  
+  .layout-sidebar-left,
+  .layout-sidebar-right {
+    @apply bg-surface-200 w-64 p-4 text-surface-800 overflow-y-auto
+  }
+  
+  .layout-main {
+    @apply flex flex-col flex-1 overflow-hidden bg-surface-50
+  }
+  
+  .layout-page-header {
+    @apply bg-surface-300 p-4 text-surface-900
+  }
+  
+  .layout-page-content {
+    @apply flex-1 bg-surface-50 p-4 text-surface-900 overflow-y-auto
+  }
+  
+  .layout-page-footer {
+    @apply bg-surface-300 p-4 text-surface-900
+  }
+  
+  .layout-footer {
+    @apply bg-surface-100 p-4 text-surface-900
+  }

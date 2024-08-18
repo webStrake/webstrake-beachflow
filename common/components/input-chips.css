@@ -1,0 +1,48 @@
+.ic-container {
+  width: 100%;
+}
+
+.ic-input-area {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+}
+
+.ic-input-area.ic-invalid {
+  border-color: #ff4136;
+}
+
+.ic-chip {
+  display: inline-flex;
+  align-items: center;
+  background-color: #e0e0e0;
+  padding: 0.25rem 0.5rem;
+  border-radius: 1rem;
+  font-size: 0.875rem;
+}
+
+.ic-chip-remove {
+  margin-left: 0.25rem;
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.ic-input {
+  flex-grow: 1;
+  min-width: 60px;
+  border: none;
+  outline: none;
+  font-size: 0.875rem;
+}
+
+.ic-error-message {
+  color: #ff4136;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+}

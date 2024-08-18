@@ -1,0 +1,65 @@
+.chip {
+    @apply inline-flex items-center justify-center px-3 py-1 rounded-full text-sm font-medium;
+  }
+
+  .chip-icon {
+    @apply mr-1 text-base;
+  }
+
+  .chip-text {
+    @apply leading-none;
+  }
+
+  .chip-close {
+    @apply ml-1 p-0.5 rounded-full hover:bg-opacity-20 hover:bg-black focus:outline-none;
+  }
+
+  .chip-close .material-symbols-rounded {
+    @apply text-sm leading-none;
+  }
+
+  /* Color variants */
+  .chip.primary {
+    @apply bg-primary-500 text-white;
+  }
+
+  .chip.secondary {
+    @apply bg-secondary-500 text-white;
+  }
+
+  .chip.success {
+    @apply bg-success-500 text-white;
+  }
+
+  .chip.warning {
+    @apply bg-warning-500 text-white;
+  }
+
+  .chip.error {
+    @apply bg-error-500 text-white;
+  }
+
+  /* Outlined variants */
+  .chip.outlined {
+    @apply bg-transparent border;
+  }
+
+  .chip.outlined.primary {
+    @apply border-primary-500 text-primary-500;
+  }
+
+  .chip.outlined.secondary {
+    @apply border-secondary-500 text-secondary-500;
+  }
+
+  .chip.outlined.success {
+    @apply border-success-500 text-success-500;
+  }
+
+  .chip.outlined.warning {
+    @apply border-warning-500 text-warning-500;
+  }
+
+  .chip.outlined.error {
+    @apply border-error-500 text-error-500;
+  }

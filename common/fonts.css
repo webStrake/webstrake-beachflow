@@ -140,6 +140,7 @@
   -webkit-font-feature-settings: "liga";
   font-feature-settings: "liga";
   -webkit-font-smoothing: antialiased;
+  vertical-align: middle;
 }
 
 .material-symbols-filled {
@@ -157,6 +158,7 @@
   -webkit-font-feature-settings: "liga";
   font-feature-settings: "liga";
   -webkit-font-smoothing: antialiased;
+  vertical-align: middle;
   font-variation-settings:
   'FILL' 1
 }

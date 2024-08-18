@@ -1,0 +1,53 @@
+/* File Input Styles */
+.file-input {
+    @apply relative inline-block w-full;
+  }
+  
+  .file-input input[type="file"] {
+    @apply absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10;
+  }
+  
+  .file-input-label {
+    @apply flex items-center px-4 py-2 bg-surface-50 border border-primary-300 rounded-md shadow-sm cursor-pointer transition-colors duration-200;
+  }
+  
+  .file-input-label:hover {
+    @apply bg-surface-100;
+  }
+  
+  .file-input-icon::after {
+    content: "upload_file";
+    font-family: 'Material Symbols Rounded';
+    @apply mr-2 text-xl text-primary-500;
+  }
+  
+  .file-input-text {
+    @apply text-sm text-gray-700 truncate;
+  }
+  
+  /* Drag and Drop Styles */
+  .drag-drop-area {
+    @apply relative border-2 border-dashed border-primary-300 rounded-lg p-8 text-center transition-colors duration-200;
+  }
+  
+  .drag-drop-area.dragover {
+    @apply border-primary-500 bg-primary-50;
+  }
+  
+  .drag-drop-area input[type="file"] {
+    @apply absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10;
+  }
+  
+  .drag-drop-content {
+    @apply flex flex-col items-center justify-center;
+  }
+  
+  .drag-drop-icon::after {
+    content: "cloud_upload";
+    font-family: 'Material Symbols Rounded';
+    @apply text-5xl text-primary-500 mb-4;
+  }
+  
+  .drag-drop-text {
+    @apply text-sm text-gray-700;
+  }

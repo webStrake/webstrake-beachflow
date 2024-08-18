@@ -1,0 +1,81 @@
+.progress-linear {
+    @apply w-full bg-gray-200 rounded-full overflow-hidden;
+  }
+  
+  .progress-linear.sm { @apply h-1; }
+  .progress-linear.md { @apply h-2; }
+  .progress-linear.lg { @apply h-3; }
+  
+  .progress-linear-fill {
+    @apply h-full transition-all duration-300 ease-in-out;
+  }
+  
+  .progress-linear-fill.indeterminate {
+    @apply animate-indeterminate;
+  }
+  
+  .progress-circular {
+    @apply relative inline-flex items-center justify-center;
+  }
+  
+  .progress-circular.sm { @apply w-8 h-8; }
+  .progress-circular.md { @apply w-12 h-12; }
+  .progress-circular.lg { @apply w-16 h-16; }
+  
+  .progress-circular-svg {
+    @apply w-full h-full -rotate-90;
+  }
+  
+  .progress-circular-background {
+    @apply stroke-gray-200 fill-none;
+  }
+  
+  .progress-circular-fill {
+    @apply fill-none transition-all duration-300 ease-in-out;
+  }
+  
+  .progress-circular-fill.indeterminate {
+    @apply animate-circular-indeterminate;
+  }
+  
+  .progress-circular-label {
+    @apply absolute text-xs font-medium;
+  }
+  
+  /* Color variations */
+  .progress-linear.primary .progress-linear-fill,
+  .progress-circular.primary .progress-circular-fill { @apply bg-primary-500 stroke-primary-500; }
+  
+  .progress-linear.secondary .progress-linear-fill,
+  .progress-circular.secondary .progress-circular-fill { @apply bg-secondary-500 stroke-secondary-500; }
+  
+  .progress-linear.tertiary .progress-linear-fill,
+  .progress-circular.tertiary .progress-circular-fill { @apply bg-tertiary-500 stroke-tertiary-500; }
+  
+  .progress-linear.success .progress-linear-fill,
+  .progress-circular.success .progress-circular-fill { @apply bg-success-500 stroke-success-500; }
+  
+  .progress-linear.warning .progress-linear-fill,
+  .progress-circular.warning .progress-circular-fill { @apply bg-warning-500 stroke-warning-500; }
+  
+  .progress-linear.error .progress-linear-fill,
+  .progress-circular.error .progress-circular-fill { @apply bg-error-500 stroke-error-500; }
+  
+  @keyframes indeterminate {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+  
+  @keyframes circular-indeterminate {
+    0% { stroke-dashoffset: 100; }
+    50% { stroke-dashoffset: 25; }
+    100% { stroke-dashoffset: 100; }
+  }
+  
+  .animate-indeterminate {
+    animation: indeterminate 1.5s infinite linear;
+  }
+  
+  .animate-circular-indeterminate {
+    animation: circular-indeterminate 1.5s infinite linear;
+  }

@@ -1,0 +1,72 @@
+.toast-stack {
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 0.5rem;
+  width: 90%;
+  max-width: 400px;
+  z-index: 1000;
+}
+
+.toast-stack .toast {
+  position: relative;
+  bottom: auto;
+  left: auto;
+  transform: none;
+}
+
+.toast {
+  @apply fixed bottom-4 left-1/2 transform -translate-x-1/2 px-4 py-2 rounded-md shadow-lg flex items-center space-x-2 cursor-pointer;
+  min-width: 250px;
+  max-width: 90%;
+  z-index: 1000;
+}
+
+.toast-icon {
+  font-family: "Material Symbols Rounded";
+  @apply text-xl;
+}
+
+.toast-icon::before {
+  @apply block;
+}
+
+.toast-message {
+  @apply text-sm font-medium;
+}
+
+.toast.success {
+  @apply bg-success-500 text-white;
+}
+
+.toast-icon.success::before {
+  content: "check_circle";
+}
+
+.toast.error {
+  @apply bg-error-500 text-white;
+}
+
+.toast-icon.error::before {
+  content: "error";
+}
+
+.toast.warning {
+  @apply bg-warning-500 text-gray-800;
+}
+
+.toast-icon.warning::before {
+  content: "warning";
+}
+
+.toast.info {
+  @apply bg-primary-500 text-white;
+}
+
+.toast-icon.info::before {
+  content: "info";
+}

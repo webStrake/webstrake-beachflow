@@ -1,0 +1,24 @@
+.divider {
+    @apply bg-plain-800;
+  }
+  
+  .divider.horizontal {
+    @apply w-full h-px my-4;
+  }
+  
+  .divider.vertical {
+    @apply h-full w-px mx-4;
+  }
+  
+  /* Color variations */
+  .divider.primary {
+    @apply bg-primary-800;
+  }
+  
+  .divider.secondary {
+    @apply bg-secondary-800;
+  }
+  
+  .divider.tertiary {
+    @apply bg-tertiary-800;
+  }

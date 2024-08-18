@@ -1,0 +1,60 @@
+.morphing-w-spinner {
+    @apply relative inline-block;
+  }
+  
+  .morphing-w-spinner.sm {
+    @apply w-8 h-8;
+  }
+  
+  .morphing-w-spinner.md {
+    @apply w-12 h-12;
+  }
+  
+  .morphing-w-spinner.lg {
+    @apply w-16 h-16;
+  }
+  
+  .spinner-path {
+    fill: none;
+    stroke-width: 6;
+    stroke-linecap: round;
+    animation: morph 3s infinite;
+  }
+  
+  @keyframes morph {
+    0%, 100% {
+      stroke-dasharray: 0 255;
+      stroke-dashoffset: 0;
+      d: path("M50 10 A40 40 0 1 1 50 90 A40 40 0 1 1 50 10");
+    }
+    50% {
+      stroke-dasharray: 255 0;
+      stroke-dashoffset: 255;
+      d: path("M10 90 L30 10 L50 90 L70 10 L90 90");
+    }
+  }
+  
+  /* Color variants */
+  .morphing-w-spinner.primary .spinner-path {
+    @apply stroke-primary-500;
+  }
+  
+  .morphing-w-spinner.secondary .spinner-path {
+    @apply stroke-secondary-500;
+  }
+  
+  .morphing-w-spinner.tertiary .spinner-path {
+    @apply stroke-tertiary-500;
+  }
+  
+  .morphing-w-spinner.success .spinner-path {
+    @apply stroke-success-500;
+  }
+  
+  .morphing-w-spinner.warning .spinner-path {
+    @apply stroke-warning-500;
+  }
+  
+  .morphing-w-spinner.error .spinner-path {
+    @apply stroke-error-500;
+  }
