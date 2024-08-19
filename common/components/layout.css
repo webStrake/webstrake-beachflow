@@ -7,7 +7,7 @@
 }
 
 .layout-body {
-  @apply flex flex-1 overflow-hidden;
+  @apply flex flex-1 min-h-0; /* Add min-h-0 */
 }
 
 .layout-sidebar-left,
@@ -16,7 +16,7 @@
 }
 
 .layout-main {
-  @apply flex flex-col flex-1 overflow-hidden;
+  @apply flex flex-col flex-1 min-h-0; /* Add min-h-0 */
 }
 
 .layout-page-header {
@@ -24,7 +24,7 @@
 }
 
 .layout-page-content {
-  @apply flex-1 overflow-y-auto;
+  @apply flex-1 overflow-y-auto min-h-0; /* Add min-h-0 */
 }
 
 .layout-page-footer {

@@ -7,7 +7,7 @@
   }
   
   .radio-container {
-    @apply flex items-center cursor-pointer;
+    @apply inline-flex items-center cursor-pointer;
   }
   
   .radio-input {
@@ -15,9 +15,7 @@
   }
   
   .radio-control {
-    @apply w-5 h-5 border-2 border-gray-300 rounded-full mr-2 flex-shrink-0;
-    @apply transition-all duration-200 ease-in-out;
-    position: relative;
+    @apply w-5 h-5 border-2 border-gray-300 rounded-full mr-2 flex-shrink-0 transition-all duration-200 ease-in-out;
   }
   
   .radio-control::after {
