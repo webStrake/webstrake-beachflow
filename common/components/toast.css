@@ -1,14 +1,14 @@
 .toast-stack {
   position: fixed;
-  bottom: 1rem;
+  bottom: 2rem; /* Increased bottom margin */
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
-  gap: 0.5rem;
-  width: 90%;
-  max-width: 400px;
+  gap: 1rem; /* Increased gap between toasts */
+  width: 95%; /* Slightly wider */
+  max-width: 500px; /* Increased max-width */
   z-index: 1000;
 }
 
@@ -20,15 +20,15 @@
 }
 
 .toast {
-  @apply fixed bottom-4 left-1/2 transform -translate-x-1/2 px-4 py-2 rounded-md shadow-lg flex items-center space-x-2 cursor-pointer;
-  min-width: 250px;
-  max-width: 90%;
+  @apply fixed bottom-4 left-1/2 transform -translate-x-1/2 px-6 py-4 rounded-lg shadow-xl flex items-center space-x-4 cursor-pointer;
+  min-width: 300px; /* Increased min-width */
+  max-width: 95%;
   z-index: 1000;
 }
 
 .toast-icon {
   font-family: "Material Symbols Rounded";
-  @apply text-xl;
+  @apply text-3xl; /* Increased icon size */
 }
 
 .toast-icon::before {
@@ -36,7 +36,7 @@
 }
 
 .toast-message {
-  @apply text-sm font-medium;
+  @apply text-base font-medium; /* Increased font size */
 }
 
 .toast.success {
