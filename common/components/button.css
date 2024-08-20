@@ -1,9 +1,8 @@
 /* Base styles for the button */
 .btn {
-  @apply px-4 py-2 rounded-2xl font-semibold inline-flex items-center justify-center relative overflow-hidden;
+  @apply rounded-2xl font-semibold inline-flex items-center justify-center relative overflow-hidden;
   min-width: 120px;
 }
-
 /* Plain button */
 .btn.plain {
   @apply bg-plain-100 text-plain-800;
@@ -151,6 +150,32 @@
   @apply text-error-500;
 }
 
+/* Size variants */
+.btn.small {
+  @apply px-3 py-1 text-sm;
+  min-width: 80px;
+}
+
+.btn.medium {
+  @apply px-4 py-2 text-base;
+  min-width: 120px;
+}
+
+.btn.large {
+  @apply px-6 py-3 text-lg;
+  min-width: 160px;
+}
+
+.btn.xlarge {
+  @apply px-8 py-4 text-xl;
+  min-width: 200px;
+}
+
+.btn.xxlarge {
+  @apply px-10 py-5 text-2xl;
+  min-width: 240px;
+}
+
 /* Loading state */
 /* Loading state */
 .btn.loading {
@@ -192,6 +217,42 @@
 @keyframes fluid-spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+/* Adjust loading spinner size for different button sizes */
+.btn.small.loading::after {
+  width: 16px;
+  height: 16px;
+  margin-top: -8px;
+  margin-left: -8px;
+}
+
+.btn.medium.loading::after {
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  margin-left: -10px;
+}
+
+.btn.large.loading::after {
+  width: 24px;
+  height: 24px;
+  margin-top: -12px;
+  margin-left: -12px;
+}
+
+.btn.xlarge.loading::after {
+  width: 28px;
+  height: 28px;
+  margin-top: -14px;
+  margin-left: -14px;
+}
+
+.btn.xxlarge.loading::after {
+  width: 32px;
+  height: 32px;
+  margin-top: -16px;
+  margin-left: -16px;
 }
 
 /* Specific loader colors for each button type */
