@@ -1,6 +1,8 @@
 /* Base styles for the button */
 .btn {
   @apply rounded-2xl font-semibold inline-flex items-center justify-center relative overflow-hidden;
+  /* Default to medium size */
+  @apply px-4 py-2 text-base;
   min-width: 120px;
 }
 /* Plain button */
