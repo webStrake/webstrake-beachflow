@@ -1,17 +1,15 @@
 .modal-backdrop {
-  @apply fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50;
+  @apply fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4 overflow-y-auto;
 }
 
 .modal-container {
-  @apply bg-white rounded-lg shadow-xl w-full max-w-md mx-4;
+  @apply bg-white rounded-lg shadow-xl w-full max-w-md mx-4 my-8 flex flex-col max-h-[calc(100vh-4rem)];
 }
 
 .modal-header {
-  @apply flex justify-between items-center p-4 border-b border-gray-200;
+  @apply flex justify-between items-center p-4 border-b border-gray-200 sticky top-0 bg-white z-10;
 }
-.modal-open {
-  overflow: hidden;
-}
+
 .modal-title {
   @apply text-lg font-semibold text-gray-800;
 }
@@ -22,24 +20,18 @@
 
 .modal-close-icon::after {
   content: "close";
-  font-family: "Material Symbols Rounded";
+  font-family: 'Material Symbols Rounded';
   @apply text-xl text-gray-500;
 }
 
 .modal-content {
-  @apply p-4;
+  @apply p-4 overflow-y-auto flex-grow;
 }
 
 .modal-footer {
-  @apply flex justify-end p-4 border-t border-gray-200;
+  @apply flex justify-end p-4 border-t border-gray-200 sticky bottom-0 bg-white;
 }
 
-/* Add these utility classes if not already in your Tailwind config */
-.max-w-md {
-  max-width: 28rem;
-}
-
-.mx-4 {
-  margin-left: 1rem;
-  margin-right: 1rem;
+body.modal-open {
+  overflow: hidden;
 }
