@@ -10,6 +10,12 @@
   @apply w-full py-2 pl-8 pr-2 text-base border-b-2 border-plain-300 bg-transparent transition-all duration-300 focus:outline-none;
 }
 
+.input-field:disabled,
+.textarea-field:disabled,
+.date-time-input:disabled {
+  @apply opacity-50 cursor-not-allowed bg-plain-100;
+}
+
 .textarea-field {
   @apply pl-2 resize-y;
   min-height: 100px;
@@ -35,15 +41,15 @@
   bottom: -1.5rem;
 }
 
-.input-field:focus,
-.textarea-field:focus,
-.date-time-input:focus {
+.input-field:focus:not(:disabled),
+.textarea-field:focus:not(:disabled),
+.date-time-input:focus:not(:disabled) {
   @apply border-primary-500;
 }
 
-.input-field:focus ~ .input-label,
-.textarea-field:focus ~ .textarea-label,
-.date-time-input:focus ~ .date-time-label {
+.input-field:focus:not(:disabled) ~ .input-label,
+.textarea-field:focus:not(:disabled) ~ .textarea-label,
+.date-time-input:focus:not(:disabled) ~ .date-time-label {
   @apply text-primary-500;
 }
 
@@ -54,14 +60,18 @@
   font-size: 1.25rem;
 }
 
-.input-field:focus ~ .input-icon,
-.date-time-input:focus ~ .date-time-icon {
+.input-field:focus:not(:disabled) ~ .input-icon,
+.date-time-input:focus:not(:disabled) ~ .date-time-icon {
   @apply text-primary-500;
 }
 
 /* Checkbox styles */
 .checkbox-container {
   @apply relative flex items-center cursor-pointer;
+}
+
+.checkbox-container.disabled {
+  @apply cursor-not-allowed opacity-50;
 }
 
 .checkbox-input {
@@ -72,7 +82,7 @@
   @apply relative inline-block w-5 h-5 mr-2 bg-white border-2 border-plain-300 rounded transition-all duration-200 ease-in-out;
 }
 
-.checkbox-input:checked + .checkbox-custom {
+.checkbox-input:checked:not(:disabled) + .checkbox-custom {
   @apply bg-primary-500 border-primary-500;
 }
 
@@ -93,7 +103,7 @@
   @apply select-none;
 }
 
-.checkbox-input:focus + .checkbox-custom {
+.checkbox-input:focus:not(:disabled) + .checkbox-custom {
   @apply ring-2 ring-primary-500 ring-opacity-50;
 }
 
@@ -112,10 +122,10 @@
   font-size: 1.25rem;
 }
 
-.date-time-input:focus {
+.date-time-input:focus:not(:disabled) {
   @apply border-primary-500;
 }
 
-.date-time-input:focus + .date-time-icon {
+.date-time-input:focus:not(:disabled) + .date-time-icon {
   @apply text-primary-500;
 }
