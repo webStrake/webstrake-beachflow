@@ -319,3 +319,57 @@
   border-top-color: theme('colors.error.500');
   border-right-color: theme('colors.error.500');
 }
+
+/* Disabled state */
+.btn:disabled,
+.btn.disabled {
+  @apply cursor-not-allowed opacity-60 grayscale transition-all duration-300;
+  filter: blur(0.5px);
+  transform: scale(0.98);
+}
+
+.btn:disabled:hover,
+.btn.disabled:hover {
+  @apply opacity-60;
+  transform: scale(0.98);
+}
+
+/* Specific disabled styles for each button type */
+.btn.plain:disabled,
+.btn.plain.disabled {
+  @apply bg-gray-300 text-gray-500;
+}
+
+.btn.primary:disabled,
+.btn.primary.disabled,
+.btn.secondary:disabled,
+.btn.secondary.disabled,
+.btn.tertiary:disabled,
+.btn.tertiary.disabled,
+.btn.success:disabled,
+.btn.success.disabled,
+.btn.warning:disabled,
+.btn.warning.disabled,
+.btn.error:disabled,
+.btn.error.disabled {
+  @apply bg-opacity-80 text-opacity-70;
+}
+
+/* Outlined disabled styles */
+.btn.outlined:disabled,
+.btn.outlined.disabled {
+  @apply border-opacity-80 text-opacity-80;
+}
+
+/* Flat disabled styles */
+.btn.flat:disabled,
+.btn.flat.disabled {
+  @apply bg-transparent text-opacity-70;
+}
+
+/* Disabled loading state */
+.btn:disabled.loading::after,
+.btn.disabled.loading::after {
+  animation: none;
+  border-color: rgba(0, 0, 0, 0.1);
+}
