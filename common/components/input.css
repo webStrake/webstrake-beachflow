@@ -13,7 +13,8 @@
 .input-field:disabled,
 .textarea-field:disabled,
 .date-time-input:disabled {
-  @apply opacity-50 cursor-not-allowed bg-plain-100;
+  @apply bg-gray-100 text-gray-500 cursor-not-allowed;
+  border-bottom-style: dashed;
 }
 
 .textarea-field {
@@ -41,15 +42,21 @@
   bottom: -1.5rem;
 }
 
-.input-field:focus:not(:disabled),
-.textarea-field:focus:not(:disabled),
-.date-time-input:focus:not(:disabled) {
+.input-field:disabled ~ .input-label,
+.textarea-field:disabled ~ .textarea-label,
+.date-time-input:disabled ~ .date-time-label {
+  @apply text-gray-400;
+}
+
+.input-field:focus,
+.textarea-field:focus,
+.date-time-input:focus {
   @apply border-primary-500;
 }
 
-.input-field:focus:not(:disabled) ~ .input-label,
-.textarea-field:focus:not(:disabled) ~ .textarea-label,
-.date-time-input:focus:not(:disabled) ~ .date-time-label {
+.input-field:focus ~ .input-label,
+.textarea-field:focus ~ .textarea-label,
+.date-time-input:focus ~ .date-time-label {
   @apply text-primary-500;
 }
 
@@ -60,9 +67,14 @@
   font-size: 1.25rem;
 }
 
-.input-field:focus:not(:disabled) ~ .input-icon,
-.date-time-input:focus:not(:disabled) ~ .date-time-icon {
+.input-field:focus ~ .input-icon,
+.date-time-input:focus ~ .date-time-icon {
   @apply text-primary-500;
+}
+
+.input-field:disabled ~ .input-icon,
+.date-time-input:disabled ~ .date-time-icon {
+  @apply text-gray-400;
 }
 
 /* Checkbox styles */
@@ -71,7 +83,7 @@
 }
 
 .checkbox-container.disabled {
-  @apply cursor-not-allowed opacity-50;
+  @apply cursor-not-allowed;
 }
 
 .checkbox-input {
@@ -82,8 +94,12 @@
   @apply relative inline-block w-5 h-5 mr-2 bg-white border-2 border-plain-300 rounded transition-all duration-200 ease-in-out;
 }
 
-.checkbox-input:checked:not(:disabled) + .checkbox-custom {
+.checkbox-input:checked + .checkbox-custom {
   @apply bg-primary-500 border-primary-500;
+}
+
+.checkbox-input:disabled + .checkbox-custom {
+  @apply bg-gray-200 border-gray-300;
 }
 
 .checkbox-custom:after {
@@ -103,7 +119,11 @@
   @apply select-none;
 }
 
-.checkbox-input:focus:not(:disabled) + .checkbox-custom {
+.checkbox-input:disabled ~ .checkbox-label {
+  @apply text-gray-400;
+}
+
+.checkbox-input:focus + .checkbox-custom {
   @apply ring-2 ring-primary-500 ring-opacity-50;
 }
 
@@ -122,10 +142,10 @@
   font-size: 1.25rem;
 }
 
-.date-time-input:focus:not(:disabled) {
+.date-time-input:focus {
   @apply border-primary-500;
 }
 
-.date-time-input:focus:not(:disabled) + .date-time-icon {
+.date-time-input:focus + .date-time-icon {
   @apply text-primary-500;
 }
