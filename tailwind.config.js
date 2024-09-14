@@ -94,7 +94,7 @@ module.exports = {
                     from: '#0F9FCF',
                     to: '#66DA40',
                 },
-                mc1: '#C1C1FF',
+                mc1: '#C1FFF0FF',
                 md1: '#00631E',
                 mc2: '#9BF6FF',
                 md2: '#006670',
