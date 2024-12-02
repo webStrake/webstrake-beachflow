@@ -149,3 +149,30 @@
 .date-time-input:focus + .date-time-icon {
   @apply text-primary-500;
 }
+
+/* Input error style */
+.error-message {
+  @apply text-sm text-error-500 mt-1;
+}
+
+.input-field.error,
+.textarea-field.error,
+.date-time-input.error {
+  @apply border-error-500;
+}
+
+.input-field.error:focus,
+.textarea-field.error:focus,
+.date-time-input.error:focus {
+  @apply border-error-500;
+}
+
+.input-field.error ~ .input-label,
+.textarea-field.error ~ .textarea-label,
+.date-time-input.error ~ .date-time-label {
+  @apply text-error-500;
+}
+
+.checkbox-input.error + .checkbox-custom {
+  @apply border-error-500;
+}

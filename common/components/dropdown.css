@@ -68,3 +68,31 @@
 .dropdown.tertiary .dropdown-toggle {
   @apply border-tertiary-500 text-tertiary-800;
 }
+
+.dropdown-checkmark {
+  margin-left: auto;
+}
+.dropdown-item.focused {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Dropdown error style */
+.dropdown-error {
+  @apply text-sm text-error-500 mt-1;
+}
+
+.dropdown-label.error {
+  @apply text-error-500;
+}
+
+.dropdown-toggle.error {
+  @apply border-error-500;
+}
+
+.dropdown-toggle.error:hover {
+  @apply border-error-600;
+}
+
+.dropdown-toggle.error:focus {
+  @apply border-error-500 ring-2 ring-error-500 ring-opacity-50;
+}
