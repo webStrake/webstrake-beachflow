@@ -124,3 +124,19 @@
 .dropdown-search-input:focus {
   @apply outline-none ring-2 ring-primary-500 ring-opacity-50 border-primary-500;
 }
+
+.select-wrapper {
+  @apply relative;
+}
+
+.select-wrapper .dropdown-icon {
+  @apply absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none;
+}
+
+select.dropdown-toggle {
+  @apply appearance-none;
+}
+
+select[multiple] {
+  @apply overflow-y-auto;
+}
