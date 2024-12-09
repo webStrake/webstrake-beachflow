@@ -19,10 +19,10 @@
  }
  
  .dropdown-menu {
-  @apply absolute z-50 w-full mt-1 bg-white border border-plain-300 rounded-md shadow-lg overflow-hidden;
+  @apply absolute z-50 w-full mt-1 bg-white border border-plain-300 rounded-md shadow-lg;
   max-height: 200px;
   overflow-y: auto;
- }
+}
  
  .dropdown-search {
   @apply sticky top-0 z-10 bg-white p-2;
