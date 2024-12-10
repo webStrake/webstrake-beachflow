@@ -1,0 +1,388 @@
+.beach-datepicker {
+    --calendar-width: 320px;
+    --calendar-padding: 1rem;
+    --day-size: 36px;
+    --transition-speed: 200ms;
+    position: relative;
+    width: var(--calendar-width);
+  }
+  
+  /* Input styling */
+  .beach-datepicker__input {
+    position: relative;
+    width: 100%;
+  }
+  
+  .beach-datepicker__input input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    padding-right: 2.5rem;
+    border: 1px solid var(--surface-300);
+    border-radius: 0.5rem;
+    background: var(--surface-50);
+    color: var(--surface-900);
+    font-size: 0.875rem;
+    transition: all var(--transition-speed) ease-in-out;
+  }
+  
+  .beach-datepicker__input input:focus {
+    border-color: var(--primary-500);
+    outline: none;
+    box-shadow: 0 0 0 3px var(--primary-100);
+  }
+  
+  .beach-datepicker__input input.error {
+    border-color: var(--error-500);
+  }
+  
+  .beach-datepicker__input input:disabled {
+    background: var(--surface-100);
+    cursor: not-allowed;
+  }
+  
+  .beach-datepicker__input-icon {
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--surface-500);
+    pointer-events: none;
+  }
+  
+  /* Calendar popup */
+  .beach-datepicker__popup {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    left: 0;
+    width: var(--calendar-width);
+    background: var(--surface-50);
+    border: 1px solid var(--surface-200);
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all var(--transition-speed) ease-in-out;
+    z-index: 50;
+  }
+  
+  .beach-datepicker__popup.open {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .beach-datepicker__popup.top {
+    top: auto;
+    bottom: calc(100% + 0.5rem);
+    transform: translateY(-10px);
+  }
+  
+  /* Header section */
+  .beach-datepicker__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px solid var(--surface-200);
+  }
+  
+  .beach-datepicker__nav-group {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .beach-datepicker__nav-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid var(--surface-200);
+    background: transparent;
+    color: var(--surface-700);
+    transition: all var(--transition-speed) ease-in-out;
+  }
+  
+  .beach-datepicker__nav-btn:hover:not(:disabled) {
+    background: var(--surface-100);
+    border-color: var(--surface-300);
+  }
+  
+  .beach-datepicker__nav-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .beach-datepicker__current {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  
+  .beach-datepicker__month,
+  .beach-datepicker__year {
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-weight: 600;
+    color: var(--surface-700);
+    cursor: pointer;
+    transition: all var(--transition-speed) ease-in-out;
+  }
+  
+  .beach-datepicker__month:hover,
+  .beach-datepicker__year:hover {
+    background: var(--surface-100);
+  }
+  
+  /* Calendar grid */
+  .beach-datepicker__grid {
+    padding: var(--calendar-padding);
+  }
+  
+  .beach-datepicker__weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin-bottom: 0.5rem;
+  }
+  
+  .beach-datepicker__weekday {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 32px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--surface-500);
+  }
+  
+  .beach-datepicker__days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+  }
+  
+  .beach-datepicker__day {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--day-size);
+    height: var(--day-size);
+    border-radius: 50%;
+    font-size: 0.875rem;
+    color: var(--surface-700);
+    transition: all var(--transition-speed) ease-in-out;
+    position: relative;
+  }
+  
+  .beach-datepicker__day:not(.empty):not(:disabled):hover {
+    background: var(--surface-100);
+  }
+  
+  .beach-datepicker__day.today:not(.selected)::after {
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--primary-500);
+  }
+  
+  .beach-datepicker__day.selected {
+    background: var(--primary-500);
+    color: white;
+    font-weight: 600;
+  }
+  
+  .beach-datepicker__day.in-range {
+    background: var(--primary-100);
+    border-radius: 0;
+  }
+  
+  .beach-datepicker__day.range-start {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  
+  .beach-datepicker__day.range-end {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  
+  .beach-datepicker__day:disabled {
+    color: var(--surface-300);
+    background: var(--surface-100);
+    cursor: not-allowed;
+  }
+  
+  /* Month picker styling */
+  .beach-datepicker__months {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    padding: var(--calendar-padding);
+  }
+  
+  .beach-datepicker__month-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--surface-700);
+    transition: all var(--transition-speed) ease-in-out;
+  }
+  
+  .beach-datepicker__month-item:hover:not(.selected) {
+    background: var(--surface-100);
+  }
+  
+  .beach-datepicker__month-item.selected {
+    background: var(--primary-500);
+    color: white;
+    font-weight: 600;
+  }
+  
+  /* Time picker styling */
+  .beach-datepicker__time {
+    padding: var(--calendar-padding);
+    border-top: 1px solid var(--surface-200);
+  }
+  
+  .beach-datepicker__time-inputs {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .beach-datepicker__time-field {
+    width: 60px;
+    padding: 0.5rem;
+    border: 1px solid var(--surface-300);
+    border-radius: 0.25rem;
+    text-align: center;
+    font-size: 1rem;
+    font-variant-numeric: tabular-nums;
+  }
+  
+  .beach-datepicker__time-separator {
+    color: var(--surface-500);
+    font-weight: 600;
+    user-select: none;
+  }
+  
+  /* Year picker styling */
+  .beach-datepicker__years {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+    padding: var(--calendar-padding);
+    max-height: 280px;
+    overflow-y: auto;
+  }
+  
+  .beach-datepicker__year-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--surface-700);
+    transition: all var(--transition-speed) ease-in-out;
+  }
+  
+  .beach-datepicker__year-item:hover:not(.selected) {
+    background: var(--surface-100);
+  }
+  
+  .beach-datepicker__year-item.selected {
+    background: var(--primary-500);
+    color: white;
+    font-weight: 600;
+  }
+  
+  /* Accessibility and focus styles */
+  .beach-datepicker__day:focus,
+  .beach-datepicker__month-item:focus,
+  .beach-datepicker__year-item:focus,
+  .beach-datepicker__time-field:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--primary-500);
+  }
+  
+  /* Animation keyframes */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 640px) {
+    .beach-datepicker {
+      --calendar-width: 100%;
+      --day-size: 32px;
+    }
+  
+    .beach-datepicker__popup {
+      position: fixed;
+      top: auto;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      transform: translateY(100%);
+    }
+  
+    .beach-datepicker__popup.open {
+      transform: translateY(0);
+    }
+  }
+  
+  /* Dark mode support */
+  @media (prefers-color-scheme: dark) {
+    .beach-datepicker__popup {
+      background: var(--surface-800);
+      border-color: var(--surface-700);
+    }
+  
+    .beach-datepicker__input input {
+      background: var(--surface-900);
+      border-color: var(--surface-700);
+      color: var(--surface-50);
+    }
+  
+    .beach-datepicker__day:not(.selected):not(:disabled) {
+      color: var(--surface-200);
+    }
+  
+    .beach-datepicker__day.in-range {
+      background: var(--primary-900);
+    }
+  
+    .beach-datepicker__day:disabled {
+      background: var(--surface-700);
+      color: var(--surface-500);
+    }
+  }
