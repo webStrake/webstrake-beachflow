@@ -1,40 +1,35 @@
 /* toast.css */
 .toast-container {
-  @apply fixed pointer-events-none z-50 w-[90%] max-w-[400px];
+  @apply fixed pointer-events-none z-50 flex flex-col gap-2 w-[90%] max-w-md;
 }
 
-/* Position variants */
-.toast-top-left {
+/* Position variants using data attribute */
+.toast-container[data-position="top-left"] {
   @apply top-4 left-4;
 }
 
-.toast-top-right {
+.toast-container[data-position="top-right"] {
   @apply top-4 right-4;
 }
 
-.toast-bottom-left {
-  @apply bottom-4 left-4;
+.toast-container[data-position="bottom-left"] {
+  @apply bottom-4 left-4 flex-col-reverse;
 }
 
-.toast-bottom-right {
-  @apply bottom-4 right-4;
+.toast-container[data-position="bottom-right"] {
+  @apply bottom-4 right-4 flex-col-reverse;
 }
 
-.toast-top-center {
+.toast-container[data-position="top-center"] {
   @apply top-4 left-1/2 -translate-x-1/2;
 }
 
-.toast-bottom-center {
-  @apply bottom-4 left-1/2 -translate-x-1/2;
+.toast-container[data-position="bottom-center"] {
+  @apply bottom-4 left-1/2 -translate-x-1/2 flex-col-reverse;
 }
 
-/* Toast elements */
 .toast {
   @apply w-full px-4 py-3 rounded shadow-lg flex items-center cursor-pointer pointer-events-auto;
-}
-
-.toast + .toast {
-  @apply mt-2;
 }
 
 .toast.success {
@@ -72,8 +67,4 @@
 
 .toast-icon.info::before {
   content: "info";
-}
-
-.toast-message {
-  @apply text-sm font-medium;
 }
