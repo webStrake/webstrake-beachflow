@@ -1,73 +1,79 @@
-.toast-stack {
-  position: fixed;
-  bottom: 1.5rem; /* Reduced bottom margin */
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column-reverse;
-  align-items: center;
-  gap: 0.75rem; /* Reduced gap between toasts */
-  width: 90%; /* Slightly narrower */
-  max-width: 450px; /* Reduced max-width */
-  z-index: 1000;
+/* toast.css */
+.toast-container {
+  @apply fixed pointer-events-none z-50 w-[90%] max-w-[400px];
 }
 
-.toast-stack .toast {
-  position: relative;
-  bottom: auto;
-  left: auto;
-  transform: none;
+/* Position variants */
+.toast-top-left {
+  @apply top-4 left-4;
 }
 
+.toast-top-right {
+  @apply top-4 right-4;
+}
+
+.toast-bottom-left {
+  @apply bottom-4 left-4;
+}
+
+.toast-bottom-right {
+  @apply bottom-4 right-4;
+}
+
+.toast-top-center {
+  @apply top-4 left-1/2 -translate-x-1/2;
+}
+
+.toast-bottom-center {
+  @apply bottom-4 left-1/2 -translate-x-1/2;
+}
+
+/* Toast elements */
 .toast {
-  @apply fixed bottom-4 left-1/2 transform -translate-x-1/2 px-5 py-3 rounded-md shadow-lg flex items-center space-x-3 cursor-pointer;
-  min-width: 280px; /* Reduced min-width */
-  max-width: 95%;
-  z-index: 1000;
+  @apply w-full px-4 py-3 rounded shadow-lg flex items-center cursor-pointer pointer-events-auto;
 }
 
-.toast-icon {
-  font-family: "Material Symbols Rounded";
-  @apply text-2xl; /* Reduced icon size */
+.toast + .toast {
+  @apply mt-2;
 }
 
-.toast-icon::before {
-  @apply block;
-}
-
-.toast-message {
-  @apply text-sm font-medium; /* Reduced font size */
-}
-
-/* Keep the color styles unchanged */
 .toast.success {
   @apply bg-success-500 text-white;
-}
-
-.toast-icon.success::before {
-  content: "check_circle";
 }
 
 .toast.error {
   @apply bg-error-500 text-white;
 }
 
-.toast-icon.error::before {
-  content: "error";
-}
-
 .toast.warning {
   @apply bg-warning-500 text-gray-800;
-}
-
-.toast-icon.warning::before {
-  content: "warning";
 }
 
 .toast.info {
   @apply bg-primary-500 text-white;
 }
 
+.toast-icon {
+  @apply mr-3 text-2xl;
+  font-family: "Material Symbols Rounded";
+}
+
+.toast-icon.success::before {
+  content: "check_circle";
+}
+
+.toast-icon.error::before {
+  content: "error";
+}
+
+.toast-icon.warning::before {
+  content: "warning";
+}
+
 .toast-icon.info::before {
   content: "info";
+}
+
+.toast-message {
+  @apply text-sm font-medium;
 }
