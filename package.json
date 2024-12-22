@@ -1,6 +1,6 @@
 {
     "name": "@webstrake/beachflow",
-    "version": "1.0.7",
+    "version": "1.0.8",
     "description": "beachflow - webstrake's design system",
     "main": "index.js",
     "types": "index.d.ts",
