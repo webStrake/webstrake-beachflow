@@ -1,6 +1,7 @@
 /* toast.css */
 .toast-container {
-  @apply fixed pointer-events-none z-50 flex flex-col gap-2 w-[90%] max-w-md;
+  @apply fixed pointer-events-none flex flex-col gap-2 w-[90%] max-w-md;
+  z-index: 1000;
 }
 
 /* Position variants using data attribute */
