@@ -72,3 +72,16 @@
  select.native-select {
   @apply absolute opacity-0 pointer-events-none;
  }
+
+ .dropdown-label.disabled {
+  @apply text-gray-400 cursor-not-allowed;
+}
+
+.dropdown-toggle.disabled {
+  @apply bg-gray-100 text-gray-400 cursor-not-allowed;
+  pointer-events: none;
+}
+
+.dropdown-toggle.disabled .dropdown-icon {
+  @apply text-gray-400;
+}
