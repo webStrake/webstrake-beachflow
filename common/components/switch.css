@@ -60,3 +60,40 @@
   .switch-track.success.checked { @apply bg-success-500; }
   .switch-track.warning.checked { @apply bg-warning-500; }
   .switch-track.error.checked { @apply bg-error-500; }
+
+  /* Added wrapper to accommodate error messages */
+.switch-wrapper {
+  @apply inline-flex flex-col;
+}
+
+/* Added error state */
+.switch-container.error .switch-track {
+  @apply border border-error-500;
+}
+
+/* Switch error message */
+.switch-error {
+  @apply text-sm text-error-500 mt-1;
+}
+
+/* Focus state for accessibility */
+.switch-input:focus-visible + .switch-track {
+  @apply ring-2 ring-primary-500 ring-opacity-50;
+}
+
+/* Added hover effect for better UX */
+.switch-track:hover:not(.disabled) {
+  @apply bg-gray-400;
+}
+
+.switch-track.checked:hover:not(.disabled).primary { @apply bg-primary-600; }
+.switch-track.checked:hover:not(.disabled).secondary { @apply bg-secondary-600; }
+.switch-track.checked:hover:not(.disabled).tertiary { @apply bg-tertiary-600; }
+.switch-track.checked:hover:not(.disabled).success { @apply bg-success-600; }
+.switch-track.checked:hover:not(.disabled).warning { @apply bg-warning-600; }
+.switch-track.checked:hover:not(.disabled).error { @apply bg-error-600; }
+
+/* Disabled cursor adjustment */
+.switch-container.disabled {
+  @apply cursor-not-allowed;
+}

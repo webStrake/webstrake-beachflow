@@ -85,3 +85,28 @@
 .dropdown-toggle.disabled .dropdown-icon {
   @apply text-gray-400;
 }
+
+/* For max selection count display */
+.dropdown-selection-info {
+  @apply text-xs px-4 py-2 border-b border-plain-300 text-plain-600;
+}
+
+/* For disabled options when max selection is reached */
+.dropdown-item.disabled {
+  @apply opacity-50 cursor-not-allowed;
+}
+
+/* For no results message */
+.dropdown-no-results {
+  @apply p-4 text-center text-plain-500 text-sm;
+}
+
+/* For the dropdown value with text overflow handling */
+.dropdown-value {
+  @apply overflow-hidden text-overflow-ellipsis whitespace-nowrap flex-1;
+}
+
+/* For the dropdown list container */
+.dropdown-list {
+  @apply list-none p-0 m-0;
+}
