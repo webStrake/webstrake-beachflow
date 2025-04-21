@@ -176,3 +176,20 @@
 .checkbox-input.error + .checkbox-custom {
   @apply border-error-500;
 }
+
+.character-count {
+  position: absolute;
+  bottom: -1.5rem;
+  right: 0;
+  font-size: 0.75rem;
+  color: var(--surface-600);
+}
+
+.character-count.exceeded {
+  color: var(--error-500);
+}
+
+.required-indicator {
+  color: var(--error-500);
+  margin-left: 0.25rem;
+}

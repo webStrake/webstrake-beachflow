@@ -60,3 +60,24 @@
   .switch-track.success.checked { @apply bg-success-500; }
   .switch-track.warning.checked { @apply bg-warning-500; }
   .switch-track.error.checked { @apply bg-error-500; }
+
+  .switch-wrapper {
+    position: relative;
+    width: fit-content;
+  }
+
+  .required-indicator {
+    @apply text-error-500;
+    margin-left: 0.25rem;
+  }
+
+  .switch-error {
+    display: block;
+    margin-top: 0.25rem;
+    font-size: 0.875rem;
+    @apply text-error-500;
+  }
+
+  .switch-track.error {
+    @apply border-2 border-error-500;
+  }
